@@ -175,19 +175,19 @@ body {
 /* Картинка для Слайда №1 (Красивый газон и покос) */
 .slide:nth-child(1) {
     background-image: linear-gradient(135deg, rgba(17,17,17,0.75) 0%, rgba(17,17,17,0.4) 100%), 
-                      url('https://unsplash.com');
+                      url('./slide1.jpg');
 }
 
 /* Картинка для Слайда №2 (Расчистка и ландшафт) */
 .slide:nth-child(2) {
     background-image: linear-gradient(135deg, rgba(17,17,17,0.75) 0%, rgba(17,17,17,0.4) 100%), 
-                      url('https://unsplash.com');
+                      url('./slide2.jpg');
 }
 
 /* Картинка для Слайда №3 (Работа арбористов / спил деревьев) */
 .slide:nth-child(3) {
     background-image: linear-gradient(135deg, rgba(17,17,17,0.75) 0%, rgba(17,17,17,0.4) 100%), 
-                      url('https://unsplash.com');
+                      url('./slide3.jpg');
 }
 .slider-btn {
     position: absolute;
