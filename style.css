@@ -8,7 +8,7 @@ html {
     scroll-behavior: smooth; /* Плавный скролл по кнопкам меню */
 }
 body {
-    font-family: 'Montserrat', Arial, sans-serif;
+    font-family: 'Montserrat';
     color: #111111;
     background-color: #ffffff;
     line-height: 1.62;
