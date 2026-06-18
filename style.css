@@ -1,0 +1,365 @@
+/* Базовые настройки стиля а-ля Tilda */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth; /* Плавный скролл по кнопкам меню */
+}
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #111111;
+    background-color: #ffffff;
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Декоративная линия под заголовками (как в Агава-М) */
+.decor-line {
+    width: 60px;
+    height: 3px;
+    background-color: #27ae60;
+    margin: 15px 0 25px 0;
+}
+.decor-line.center {
+    margin: 15px auto 45px auto;
+}
+
+/* Кнопка с премиальным эффектом */
+.btn {
+    display: inline-block;
+    background-color: #27ae60;
+    color: white;
+    padding: 16px 36px;
+    text-decoration: none;
+    border-radius: 30px; /* Круглые стильные кнопки */
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn:hover {
+    background-color: #1e8449;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(39, 174, 96, 0.5);
+}
+
+/* Фирменная шапка с эффектом размытия заднего плана (Glassmorphism) */
+.header {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px); /* Размывает то, что под шапкой при скролле */
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 18px 0;
+    transition: all 0.3s ease;
+}
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+.logo-main {
+    font-size: 22px;
+    font-weight: 800;
+    color: #111111;
+    letter-spacing: 1.5px;
+}
+.logo-sub {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #27ae60;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-top: 2px;
+}
+.nav a {
+    color: #111111;
+    text-decoration: none;
+    margin: 0 16px;
+    font-weight: 500;
+    font-size: 14px;
+    position: relative;
+    transition: color 0.3s;
+}
+/* Эффект красивой линии при наведении на меню */
+.nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -6px;
+    left: 0;
+    background-color: #27ae60;
+    transition: width 0.3s ease;
+}
+.nav a:hover::after {
+    width: 100%;
+}
+.nav a:hover {
+    color: #27ae60;
+}
+.header-phone {
+    text-align: right;
+}
+.header-phone a {
+    display: block;
+    color: #111111;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.header-phone a:hover { color: #27ae60; }
+.header-phone span {
+    font-size: 11px;
+    color: #7f8c8d;
+    display: block;
+    margin-top: 1px;
+}
+
+/* Слайдер с глубоким градиентом */
+.slider-container {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    background: #111;
+}
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* Затемняющий дорогой градиент поверх заглушки */
+    background: linear-gradient(135deg, rgba(17,17,17,0.75) 0%, rgba(17,17,17,0.4) 100%), url('https://placeholder.com') no-repeat center center/cover;
+}
+/* Настройки для каждого отдельного слайда */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* Картинка для Слайда №1 (Красивый газон и покос) */
+.slide:nth-child(1) {
+    background-image: linear-gradient(135deg, rgba(17,17,17,0.75) 0%, rgba(17,17,17,0.4) 100%), 
+                      url('https://unsplash.com');
+}
+
+/* Картинка для Слайда №2 (Расчистка и ландшафт) */
+.slide:nth-child(2) {
+    background-image: linear-gradient(135deg, rgba(17,17,17,0.75) 0%, rgba(17,17,17,0.4) 100%), 
+                      url('https://unsplash.com');
+}
+
+/* Картинка для Слайда №3 (Работа арбористов / спил деревьев) */
+.slide:nth-child(3) {
+    background-image: linear-gradient(135deg, rgba(17,17,17,0.75) 0%, rgba(17,17,17,0.4) 100%), 
+                      url('https://unsplash.com');
+}
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(5px);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 50%;
+    transition: all 0.3s;
+    z-index: 10;
+}
+.slider-btn:hover { background: #27ae60; }
+.prev { left: 30px; }
+.next { right: 30px; }
+
+/* Блок О компании */
+.about-section {
+    padding: 100px 0;
+    background: #fcfcfc;
+}
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+}
+.about-text h2 {
+    font-size: 34px;
+    font-weight: 700;
+    color: #111111;
+}
+.about-text p {
+    color: #555555;
+    font-size: 16px;
+}
+.about-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+.stat-item {
+    background: white;
+    padding: 30px 24px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+    border: 1px solid #f0f0f0;
+    transition: transform 0.3s;
+}
+.stat-item:hover {
+    transform: translateY(-3px);
+}
+.stat-num {
+    font-size: 26px;
+    font-weight: 800;
+    color: #27ae60;
+    margin-bottom: 8px;
+}
+.stat-desc {
+    font-size: 13px;
+    color: #666666;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* Сетка карточек Услуг (премиум эффект Тильды) */
+.services-section {
+    padding: 100px 0;
+}
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+}
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+.service-card {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.01);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+}
+/* Карточка приподнимается и плавно подсвечивается тенью */
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+    border-color: rgba(39, 174, 96, 0.2);
+}
+.card-img-placeholder {
+    height: 200px;
+    background: #f5f7f8;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #95a5a6;
+    font-weight: 600;
+    margin-bottom: 24px;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    overflow: hidden;
+    position: relative;
+}
+/* Легкий зум эффекта заглушки при наведении */
+.service-card:hover .card-img-placeholder {
+    background: #eef1f2;
+}
+.service-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #111111;
+}
+.service-card p {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 24px;
+    flex-grow: 1;
+    line-height: 1.5;
+}
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    border-top: 1px solid #f9f9f9;
+    padding-top: 15px;
+}
+.card-price {
+    font-weight: 700;
+    color: #111111;
+    font-size: 17px;
+}
+.card-link {
+    color: #27ae60;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+.service-card:hover .card-link {
+    color: #1e8449;
+}
+
+/* Контакты */
+.contacts-section {
+    padding: 100px 0;
+    background: #111111;
+    color: white;
+    text-align: center;
+}
+.contacts-section h2 { font-size: 36px; font-weight: 700; margin-bottom: 15px; }
+.contacts-section p { color: #aaaaaa; font-size: 16px; margin-bottom: 35px; font-weight: 300; }
+.contacts-phone-block .btn { background-color: transparent; border: 2px solid #27ae60; box-shadow: none;}
+.contacts-phone-block .btn:hover { background: #27ae60; }
+
+/* Адаптивность для телефонов */
+@media (max-width: 992px) {
+    .nav { display: none; } /* Скрываем меню на планшетах/мобилках для простоты */
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .slide-content h1 { font-size: 32px; }
+    .about-section, .services-section, .contacts-section { padding: 60px 0; }
+}

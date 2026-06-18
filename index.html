@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Теренкур — Ландшафтные работы на КМВ</title>
+    <!-- Подключаем премиальный шрифт Montserrat, как на Тильде -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=updated">
+</head>
+<body>
+
+    <!-- Шапка (Header) с эффектом размытия стекла -->
+    <header class="header">
+        <div class="container header-flex">
+            <div class="logo">
+                <span class="logo-main">ТЕРЕНКУР</span>
+                <span class="logo-sub">ландшафтные работы</span>
+            </div>
+            <nav class="nav">
+                <a href="#hero">Главная</a>
+                <a href="#services">Услуги и цены</a>
+                <a href="#about">Нашим клиентам</a>
+                <a href="#contacts">Контакты</a>
+            </nav>
+            <div class="header-phone">
+                <a href="tel:+79000000000">+7 (900) 000-00-00</a>
+                <span>Кавказские Минеральные Воды</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Слайдер (Hero Slider) -->
+    <section id="hero" class="slider-container">
+        <div class="slides">
+            <!-- Слайд 1 -->
+            <div class="slide active">
+                <div class="slide-content animate-up">
+                    <h1>Профессиональный покос травы и спил деревьев</h1>
+                    <p>Компания «Теренкур» — ваш надежный партнер в благоустройстве территорий на КМВ.</p>
+                    <a href="#contacts" class="btn btn-animated">Оставить заявку</a>
+                </div>
+            </div>
+            <!-- Слайд 2 -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h1>Расчистка участков любой сложности под ключ</h1>
+                    <p>Удаление деревьев, корчевание пней и вывоз мусора в кратчайшие сроки.</p>
+                    <a href="#services" class="btn btn-animated">Наши услуги</a>
+                </div>
+            </div>
+            <!-- Слайд 3 -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h1>Гербицидная обработка и уничтожение бурьяна</h1>
+                    <p>Эффективное химическое уничтожение нежелательной растительности с гарантией.</p>
+                    <a href="#contacts" class="btn btn-animated">Консультация</a>
+                </div>
+            </div>
+        </div>
+        <button class="slider-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="slider-btn next" onclick="moveSlide(1)">&#10095;</button>
+    </section>
+
+    <!-- О компании (About) -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>О компании «Теренкур»</h2>
+                    <div class="decor-line"></div>
+                    <p>Мы осуществляем полный спектр ландшафтных и сопутствующих работ на территории Кавказских Минеральные Вод. Специализируемся на профессиональном покосе травы, комплексном спиле деревьев любой сложности, а также полной расчистке и подготовке участков к строительству или благоустройству.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-num">с 2010</div>
+                        <div class="stat-desc">Работаем более 15 лет на рынке ландшафтных услуг</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-num">B2B / B2C</div>
+                        <div class="stat-desc">Коммерческо-государственный сектор, частный сектор</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-num">230+</div>
+                        <div class="stat-desc">Довольных заказчиков услуг</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-num">1000+ ГА</div>
+                        <div class="stat-desc">Территории облагорожено</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Услуги компании (Services) -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title">Услуги компании</h2>
+            <div class="decor-line center"></div>
+            <div class="services-grid">
+                
+                <div class="service-card">
+                    <div class="card-img-placeholder">
+                        <span>Покос травы</span>
+                    </div>
+                    <h3>Покос травы и бурьяна</h3>
+                    <p>Быстрое и качественное скашивание сорной растительности на любых площадях.</p>
+                    <div class="card-footer">
+                        <span class="card-price">от 500 руб.</span>
+                        <a href="#contacts" class="card-link">Заказать →</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="card-img-placeholder">
+                        <span>Хим. обработка</span>
+                    </div>
+                    <h3>Химическое уничтожение растительности</h3>
+                    <p>Профессиональная гербицидная обработка для долгосрочной защиты от сорняков.</p>
+                    <div class="card-footer">
+                        <span class="card-price">от 1 500 руб.</span>
+                        <a href="#contacts" class="card-link">Заказать →</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="card-img-placeholder">
+                        <span>Арбористика</span>
+                    </div>
+                    <h3>Спил и удаление деревьев</h3>
+                    <p>Безопасный спил аварийных деревьев методами арбористики в стесненных условиях.</p>
+                    <div class="card-footer">
+                        <span class="card-price">от 3 000 руб.</span>
+                        <a href="#contacts" class="card-link">Заказать →</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="card-img-placeholder">
+                        <span>Расчистка</span>
+                    </div>
+                    <h3>Корчевание пней и расчистка участков</h3>
+                    <p>Механизированное и ручное удаление пней, комплексная подготовка участков.</p>
+                    <div class="card-footer">
+                        <span class="card-price">от 4 000 руб.</span>
+                        <a href="#contacts" class="card-link">Заказать →</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="card-img-placeholder">
+                        <span>Стрижка</span>
+                    </div>
+                    <h3>Обрезка и фигурная стрижка кустарников</h3>
+                    <p>Формовочная и санитарная обрезка кустарников, живых изгородей.</p>
+                    <div class="card-footer">
+                        <span class="card-price">от 1 000 руб.</span>
+                        <a href="#contacts" class="card-link">Заказать →</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="card-img-placeholder">
+                        <span>Вывоз</span>
+                    </div>
+                    <h3>Вывоз порубочных остатков и утилизация</h3>
+                    <p>Сбор, погрузка, оперативный вывоз и законная утилизация древесных отходов.</p>
+                    <div class="card-footer">
+                        <span class="card-price">от 2 500 руб.</span>
+                        <a href="#contacts" class="card-link">Заказать →</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты (Contacts) -->
+    <section id="contacts" class="contacts-section">
+        <div class="container">
+            <h2>Остались вопросы?</h2>
+            <p>Свяжитесь с нами для бесплатного расчета стоимости работ на вашем объекте</p>
+            <div class="contacts-phone-block">
+                <a href="tel:+79000000000" class="btn btn-animated">+7 (900) 000-00-00</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            slides[currentSlide].classList.remove('active');
+            // Убираем анимацию со старого слайда
+            slides[currentSlide].querySelector('.slide-content').classList.remove('animate-up');
+            
+            currentSlide = (index + slides.length) % slides.length;
+            
+            slides[currentSlide].classList.add('active');
+            // Добавляем плавное появление текста на новом слайде
+            slides[currentSlide].querySelector('.slide-content').classList.add('animate-up');
+        }
+
+        function moveSlide(step) {
+            showSlide(currentSlide + step);
+        }
+
+        setInterval(() => {
+            moveSlide(1);
+        }, 6000);
+    </script>
+</body>
+</html>
