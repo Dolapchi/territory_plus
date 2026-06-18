@@ -172,23 +172,24 @@ body {
     background-size: cover;
 }
 
-/* Картинка для Слайда №1 (Покос травы) */
+/* Картинка для Слайда №1 */
 .slide:nth-child(1) {
     background-image: linear-gradient(135deg, rgba(17,17,17,0.75) 0%, rgba(17,17,17,0.4) 100%), 
-                      url('https://unsplash.com');
+                      url('slide1.jpg.JPG');
 }
 
-/* Картинка для Слайда №2 (Ландшафт) */
+/* Картинка для Слайда №2 */
 .slide:nth-child(2) {
     background-image: linear-gradient(135deg, rgba(17,17,17,0.75) 0%, rgba(17,17,17,0.4) 100%), 
-                      url('https://unsplash.com');
+                      url('slide2.jpg.JPG');
 }
 
-/* Картинка для Слайда №3 (Спил деревьев) */
+/* Картинка для Слайда №3 */
 .slide:nth-child(3) {
     background-image: linear-gradient(135deg, rgba(17,17,17,0.75) 0%, rgba(17,17,17,0.4) 100%), 
-                      url('https://unsplash.com');
+                      url('slide3.jpg.JPG');
 }
+
 .slider-btn {
     position: absolute;
     top: 50%;
