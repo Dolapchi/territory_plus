@@ -1,64 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Теренкур — Ландшафтные работы на КМВ</title>
-    
-    <!-- ИСПРАВЛЕНО: Правильное подключение шрифтов Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- ИСПРАВЛЕНО: Добавлен точный путь к стилям для серверов GitHub -->
-    <link rel="stylesheet" href="./style.css?v=6">
-</head>
+    <title>Территория Плюс — Ландшафтные работы на КМВ</title>
 
+    <!-- Подключаем шрифты локально (заменяем Google Fonts) -->
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
 
-    <!-- Шапка (Header) с эффектом размытия стекла -->
+    <!-- ============ ШАПКА (Header) ============ -->
     <header class="header">
         <div class="container header-flex">
+            <!-- Логотип слева -->
             <div class="logo">
-                <span class="logo-main">ТЕРЕНКУР</span>
-                <span class="logo-sub">ландшафтные работы</span>
+                <span class="logo-main">Территория Плюс</span>
             </div>
+
+            <!-- Меню справа -->
             <nav class="nav">
                 <a href="#hero">Главная</a>
-                <a href="#services">Услуги и цены</a>
-                <a href="#about">Нашим клиентам</a>
+                <a href="#services">Услуги</a>
+                <a href="#about">О компании</a>
+                <a href="#advantages">Преимущества</a>
                 <a href="#contacts">Контакты</a>
             </nav>
+
+            <!-- Телефон и город справа -->
             <div class="header-phone">
-                <a href="tel:+79000000000">+7 (900) 000-00-00</a>
+                <a href="tel:+79602389760">+7 960 238-97-60</a>
                 <span>Кавказские Минеральные Воды</span>
             </div>
         </div>
     </header>
 
-    <!-- Слайдер (Hero Slider) -->
+    <!-- ============ СЛАЙДЕР (Hero Slider) ============ -->
     <section id="hero" class="slider-container">
         <div class="slides">
             <!-- Слайд 1 -->
             <div class="slide active">
-                <div class="slide-content animate-up">
+                <div class="slide-content">
+                    <div class="brand-title">ТЕРРИТОРИЯ <span class="slash">/</span> <span class="plus">плюс:</span></div>
                     <h1>Профессиональный покос травы и спил деревьев</h1>
-                    <p>Компания «Теренкур» — ваш надежный партнер в благоустройстве территорий на КМВ.</p>
-                    <a href="#contacts" class="btn btn-animated">Оставить заявку</a>
+                    <a href="#contacts" class="scroll-down">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <path d="M12 5v14M5 12l7 7 7-7"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
             <!-- Слайд 2 -->
             <div class="slide">
                 <div class="slide-content">
+                    <div class="brand-title">ТЕРРИТОРИЯ <span class="slash">/</span> <span class="plus">плюс:</span></div>
                     <h1>Расчистка участков любой сложности под ключ</h1>
-                    <p>Удаление деревьев, корчевание пней и вывоз мусора в кратчайшие сроки.</p>
-                    <a href="#services" class="btn btn-animated">Наши услуги</a>
+                    <a href="#services" class="scroll-down">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <path d="M12 5v14M5 12l7 7 7-7"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
             <!-- Слайд 3 -->
             <div class="slide">
                 <div class="slide-content">
+                    <div class="brand-title">ТЕРРИТОРИЯ <span class="slash">/</span> <span class="plus">плюс:</span></div>
                     <h1>Гербицидная обработка и уничтожение бурьяна</h1>
-                    <p>Эффективное химическое уничтожение нежелательной растительности с гарантией.</p>
-                    <a href="#contacts" class="btn btn-animated">Консультация</a>
+                    <a href="#contacts" class="scroll-down">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <path d="M12 5v14M5 12l7 7 7-7"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
@@ -66,14 +79,28 @@
         <button class="slider-btn next" onclick="moveSlide(1)">&#10095;</button>
     </section>
 
-    <!-- О компании (About) -->
+    <!-- ============ БЛОК "РАССЧИТАТЬ СТОИМОСТЬ" (как на Агава-М) ============ -->
+    <section class="cta-section">
+        <div class="container cta-flex">
+            <div class="cta-text">
+                <h2>Нужен расчёт стоимости?</h2>
+                <p>Позвоните нам, и мы бесплатно оценим объём работ</p>
+            </div>
+            <div class="cta-buttons">
+                <a href="tel:+79602389760" class="btn btn-phone">+7 960 238-97-60</a>
+                <a href="#calculator" class="btn btn-calc">Рассчитать стоимость</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ О КОМПАНИИ ============ -->
     <section id="about" class="about-section">
         <div class="container">
             <div class="about-grid">
                 <div class="about-text">
-                    <h2>О компании «Теренкур»</h2>
+                    <h2>О компании «Территория Плюс»</h2>
                     <div class="decor-line"></div>
-                    <p>Мы осуществляем полный спектр ландшафтных и сопутствующих работ на территории Кавказских Минеральные Вод. Специализируемся на профессиональном покосе травы, комплексном спиле деревьев любой сложности, а также полной расчистке и подготовке участков к строительству или благоустройству.</p>
+                    <p>Мы осуществляем полный спектр ландшафтных и сопутствующих работ на территории Кавказских Минеральных Вод. Специализируемся на профессиональном покосе травы, комплексном спиле деревьев любой сложности, а также полной расчистке и подготовке участков к строительству или благоустройству.</p>
                 </div>
                 <div class="about-stats">
                     <div class="stat-item">
@@ -97,17 +124,52 @@
         </div>
     </section>
 
-    <!-- Услуги компании (Services) -->
+    <!-- ============ НАШИ ПРЕИМУЩЕСТВА ============ -->
+    <section id="advantages" class="advantages-section">
+        <div class="container">
+            <div class="advantages-header">
+                <span class="advantages-subtitle">Почему нас выбирают?</span>
+                <h2>Наши преимущества</h2>
+                <div class="decor-line center"></div>
+            </div>
+            <div class="advantages-grid">
+                <div class="advantage-item">
+                    <div class="advantage-number" data-target="25">0</div>
+                    <div class="advantage-label">лет работаем с ландшафтом</div>
+                    <div class="advantage-sub-label">с 1996 года</div>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-number" data-target="280">0</div>
+                    <div class="advantage-label">довольных заказчиков</div>
+                    <div class="advantage-sub-label">по всей России</div>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-number" data-target="1000">0</div>
+                    <div class="advantage-label">га территорий озеленено</div>
+                    <div class="advantage-sub-label">сотни проектов реализовано</div>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-number" data-target="100000">0</div>
+                    <div class="advantage-label">растений и деревьев высажено</div>
+                    <div class="advantage-sub-label">здоровый и ухоженный сад</div>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-number" data-target="2">0</div>
+                    <div class="advantage-label">года гарантии на всё</div>
+                    <div class="advantage-sub-label">при нашем уходе</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ УСЛУГИ ============ -->
     <section id="services" class="services-section">
         <div class="container">
             <h2 class="section-title">Услуги компании</h2>
             <div class="decor-line center"></div>
             <div class="services-grid">
-                
                 <div class="service-card">
-                    <div class="card-img-placeholder">
-                        <span>Покос травы</span>
-                    </div>
+                    <div class="card-img-placeholder">Покос травы</div>
                     <h3>Покос травы и бурьяна</h3>
                     <p>Быстрое и качественное скашивание сорной растительности на любых площадях.</p>
                     <div class="card-footer">
@@ -115,11 +177,8 @@
                         <a href="#contacts" class="card-link">Заказать →</a>
                     </div>
                 </div>
-
                 <div class="service-card">
-                    <div class="card-img-placeholder">
-                        <span>Хим. обработка</span>
-                    </div>
+                    <div class="card-img-placeholder">Хим. обработка</div>
                     <h3>Химическое уничтожение растительности</h3>
                     <p>Профессиональная гербицидная обработка для долгосрочной защиты от сорняков.</p>
                     <div class="card-footer">
@@ -127,11 +186,8 @@
                         <a href="#contacts" class="card-link">Заказать →</a>
                     </div>
                 </div>
-
                 <div class="service-card">
-                    <div class="card-img-placeholder">
-                        <span>Арбористика</span>
-                    </div>
+                    <div class="card-img-placeholder">Арбористика</div>
                     <h3>Спил и удаление деревьев</h3>
                     <p>Безопасный спил аварийных деревьев методами арбористики в стесненных условиях.</p>
                     <div class="card-footer">
@@ -139,11 +195,8 @@
                         <a href="#contacts" class="card-link">Заказать →</a>
                     </div>
                 </div>
-
                 <div class="service-card">
-                    <div class="card-img-placeholder">
-                        <span>Расчистка</span>
-                    </div>
+                    <div class="card-img-placeholder">Расчистка</div>
                     <h3>Корчевание пней и расчистка участков</h3>
                     <p>Механизированное и ручное удаление пней, комплексная подготовка участков.</p>
                     <div class="card-footer">
@@ -151,11 +204,8 @@
                         <a href="#contacts" class="card-link">Заказать →</a>
                     </div>
                 </div>
-
                 <div class="service-card">
-                    <div class="card-img-placeholder">
-                        <span>Стрижка</span>
-                    </div>
+                    <div class="card-img-placeholder">Стрижка</div>
                     <h3>Обрезка и фигурная стрижка кустарников</h3>
                     <p>Формовочная и санитарная обрезка кустарников, живых изгородей.</p>
                     <div class="card-footer">
@@ -163,11 +213,8 @@
                         <a href="#contacts" class="card-link">Заказать →</a>
                     </div>
                 </div>
-
                 <div class="service-card">
-                    <div class="card-img-placeholder">
-                        <span>Вывоз</span>
-                    </div>
+                    <div class="card-img-placeholder">Вывоз</div>
                     <h3>Вывоз порубочных остатков и утилизация</h3>
                     <p>Сбор, погрузка, оперативный вывоз и законная утилизация древесных отходов.</p>
                     <div class="card-footer">
@@ -175,36 +222,31 @@
                         <a href="#contacts" class="card-link">Заказать →</a>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Контакты (Contacts) -->
+    <!-- ============ КОНТАКТЫ ============ -->
     <section id="contacts" class="contacts-section">
         <div class="container">
             <h2>Остались вопросы?</h2>
             <p>Свяжитесь с нами для бесплатного расчета стоимости работ на вашем объекте</p>
             <div class="contacts-phone-block">
-                <a href="tel:+79000000000" class="btn btn-animated">+7 (900) 000-00-00</a>
+                <a href="tel:+79602389760" class="btn">+7 960 238-97-60</a>
             </div>
         </div>
     </section>
 
+    <!-- ============ СКРИПТЫ ============ -->
     <script>
+        // ---- Слайдер ----
         let currentSlide = 0;
         const slides = document.querySelectorAll('.slide');
 
         function showSlide(index) {
             slides[currentSlide].classList.remove('active');
-            // Убираем анимацию со старого слайда
-            slides[currentSlide].querySelector('.slide-content').classList.remove('animate-up');
-            
             currentSlide = (index + slides.length) % slides.length;
-            
             slides[currentSlide].classList.add('active');
-            // Добавляем плавное появление текста на новом слайде
-            slides[currentSlide].querySelector('.slide-content').classList.add('animate-up');
         }
 
         function moveSlide(step) {
@@ -214,6 +256,40 @@
         setInterval(() => {
             moveSlide(1);
         }, 6000);
+
+        // ---- Анимация цифр при скролле ----
+        document.addEventListener('DOMContentLoaded', function() {
+            const counters = document.querySelectorAll('.advantage-number');
+
+            function animateCounter(counter) {
+                const target = parseInt(counter.dataset.target);
+                if (isNaN(target) || target === 0) return;
+                const duration = 2000;
+                const step = Math.max(1, Math.floor(target / 60));
+                let current = 0;
+
+                const interval = setInterval(() => {
+                    current += step;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(interval);
+                    }
+                    counter.textContent = current + (target > 100 ? '+' : '');
+                }, 30);
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounter(entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            counters.forEach(counter => observer.observe(counter));
+        });
     </script>
+
 </body>
 </html>
